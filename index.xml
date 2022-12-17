@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://xrc.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Dec 2022 21:03:13 +0800</lastBuildDate><atom:link href="https://xrc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LinuxHW</title>
+      <link>https://xrc.github.io/post/linuxhw/</link>
+      <pubDate>Fri, 16 Dec 2022 21:03:13 +0800</pubDate>
+      
+      <guid>https://xrc.github.io/post/linuxhw/</guid>
+      <description>Socket 在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递：
+这里使用 java编写
+服务端：
+import java.io.IOException; import java.io.InputStream; import java.io.OutputStream; import java.net.ServerSocket; import java.net.Socket; import java.nio.charset.StandardCharsets; public class Server { public static void main(String[] args) throws IOException { //在本机的9999端口监听，等待链接 ServerSocket serverSocket = new ServerSocket(9999); //如果有客户端链接，则会返回Socket对象，程序继续 Socket socket = serverSocket.accept(); //通过 socket.getInputStream()输入流 读取客户端写入到数据通道的数据 InputStream inputStream = socket.getInputStream(); byte[] bytes = new byte[1024]; int readLen = 0; while ((readLen = inputStream.read(bytes)) != -1){ //根据实际读取到的长度，显示内容 System.out.println(new String(bytes,0,readLen)); } //收到客户端的请求后通过输出流进行响应 OutputStream outputStream = socket.</description>
+    </item>
+    
+    <item>
+      <title>LinuxNote</title>
+      <link>https://xrc.github.io/post/linuxnote/</link>
+      <pubDate>Fri, 16 Dec 2022 20:50:18 +0800</pubDate>
+      
+      <guid>https://xrc.github.io/post/linuxnote/</guid>
+      <description>一、vim 插入模式
+按下i,o,a,r等任何一个字母后可以进入编辑模式，一般按i即可
+命令行模式
+输入 esc 再输入 : 在这个模式中可以提供相关的指令，完成读取、存盘、替换、离开vim等操作
+快捷键
+yy 拷贝 p 粘贴 dd 删除 二、开机、重启、注销 开机： shutdown -h now 立即关机 shutdown -h 1 一分钟后关机 重启： shutdown -r row 立即重启 reboot 注销： logout 三、用户管理 3.1 添加和删除用户 添加用户： useradd + 用户名 修改用户密码： passwd + 用户名 删除用户： userdel + 用户名 3.2 用户组 新增组： groupadd + 组名 删除组： groupdel + 组名 添加用户时指定组： useradd -g + 用户组 + 用户名 修改用户的组： usermod -g + 用户组 + 用户名 四、文件目录指定 4.</description>
+    </item>
+    
+  </channel>
+</rss>
